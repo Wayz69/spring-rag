@@ -42,5 +42,11 @@ public class DocumentRessource {
         return documentService.findAll();
     }
 
+    @PostMapping("/documents/chat2/{user}")
+    public String chat2(@RequestBody String query) throws InterruptedException {
+        String result = documentService.chat(query);
+
+        return result;
+    }
 
 }
